@@ -1,26 +1,38 @@
 import React from "react";
+import "./style.css";
 
 export function EmployeeList({ children }) {
   return <ul className="list-group">{children}</ul>;
 }
 
-export function EmployeeListItem(props) {
+export function EmployeeListItem( {firstName, lastName, img, phoneNum, email, DOB }) {
   return (
-    <li className="list-group-item">
-      <Container>
-        <Row>
-          <Col size="xs-4 sm-2">
-            <Thumbnail src={thumbnail || "https://placehold.it/300x300"} />
-          </Col>
-          <Col size="xs-8 sm-9">
-            <h3>{title}</h3>
-            <p>Ingredients: {ingredients}</p>
-            <a rel="noreferrer noopener" target="_blank" href={href}>
-              Go to recipe!
-            </a>
-          </Col>
-        </Row>
-      </Container>
-    </li>
+    <div className="container">
+      <li className="list-group-item">
+        <div className="row">
+          <div className="col-md-1 column">
+            <img src={img}></img>
+          </div>
+
+          <div className="col-md-3 column">
+            <p>{firstName} {lastName}</p>
+          </div>
+
+          <div className="col-md-2 column">
+            <p>{phoneNum}</p>
+          </div>
+
+          <div className="col-md-3 column">
+            <p>{email}</p>
+          </div>
+
+          <div className="col-md-3 column">
+            <p>{DOB}</p>
+          </div>
+
+        </div>
+      </li>
+    </div>
+  
   );
 }

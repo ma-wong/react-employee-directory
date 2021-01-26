@@ -3,9 +3,13 @@ import React from "react";
 
 function SearchBar(props) {
   return (
-    <div className="input-group input-group-lg">
-      <input className="form-control" type="text" {...props} />
+    <div className="container">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Search" aria-describedby="button-addon2"/>
+        {/* <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button> */}
+      </div>
     </div>
+    
   );
 }
 
